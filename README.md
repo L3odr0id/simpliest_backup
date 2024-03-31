@@ -1,4 +1,4 @@
-# Simpliest folder backup
+# The simpliest backup
 These utilities will help you to zip some folder every night and keep a specified number of archives.
 
 ## How to use

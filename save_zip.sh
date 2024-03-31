@@ -2,7 +2,7 @@
 
 . config
 
-ZipName="${BackupsPath}$(date +%Y).$(date +%m).$(date +%d).$(date +%M).$(date +%S)-$EntityName-backup".zip
+ZipName="${BackupsPath}$(date +%Y).$(date +%m).$(date +%d)-$EntityName-backup".zip
 
 # Check if ${BackupsPath} exists
 cd $BackupsPath || { exit 1; }
