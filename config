@@ -1,4 +1,5 @@
 echo "[+] Read config"
-ServerPath="/example/path/minecraft_server/"
+ServerPath="/example/path/server_data/"
 BackupsPath="/example/another/path/backups/"
+EntityName="server"
 MaxBackups=7

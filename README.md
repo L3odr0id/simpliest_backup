@@ -1,5 +1,5 @@
-# Simpliest minecraft server backup
-These utilities will allow you to backup your server every night and save a specified number of archives.
+# Simpliest folder backup
+These utilities will allow you to backup some folder every night and save a specified number of archives.
 
 ## How to use
 1. git clone 
