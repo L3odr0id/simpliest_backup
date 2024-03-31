@@ -1,0 +1,4 @@
+echo "[+] Read config"
+ServerPath="/example/path/minecraft_server/"
+BackupsPath="/example/another/path/backups/"
+MaxBackups=7

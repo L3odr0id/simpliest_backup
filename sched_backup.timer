@@ -1,0 +1,8 @@
+[Unit]
+Description=Backup Scheduling.
+
+[Timer]
+OnCalendar=*-*-* 02:28:00
+
+[Install]
+WantedBy=multi-user.target
