@@ -1,5 +1,6 @@
 echo "[+] Read config"
-ServerPath="/example/path/server_data/"
+ServerPath="/example/path/minecraft_server/"
 BackupsPath="/example/another/path/backups/"
 EntityName="server"
 MaxBackups=7
+Exclude=("dynmap/*" "hs_err_pid*.log" "replay_pid*.log" "bluemap/*") # minecraft preset

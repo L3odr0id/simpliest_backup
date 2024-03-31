@@ -11,7 +11,7 @@ cd $BackupsPath || { exit 1; }
 cd $ServerPath || { exit 1; }
 
 echo "[+] Zip folder ${ServerPath}"
-zip -9 -y -r -q $ZipName ./* -x "dynmap/*" "hs_err_pid*.log" "replay_pid*.log" "bluemap/*"
+zip -9 -y -r -q $ZipName ./* -x "${Exclude[@]}"
 
 # Count backups
 BackupsNum=$(find $BackupsPath -name "*-$EntityName-backup.zip" | wc -l)
@@ -20,9 +20,9 @@ BackupsNum=$(find $BackupsPath -name "*-$EntityName-backup.zip" | wc -l)
 if [[ $BackupsNum -gt $MaxBackups ]];
  then
     OldestBackupRelative=$(ls -t $BackupsPath | grep "-$EntityName-backup.zip" | tail -1)
-    OldersBackup="$BackupsPath$OldestBackupRelative"
-    echo "[+] Remove $OldersBackup"
-    rm $OldersBackup
+    OldestBackup="$BackupsPath$OldestBackupRelative"
+    echo "[+] Remove $OldestBackup"
+    rm $OldestBackup
 fi
 
 echo "[+] Done"
