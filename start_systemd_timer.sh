@@ -13,7 +13,7 @@ Description=Scheduled Backup
 
 [Service]
 Type=simple
-ExecStart=${SCRIPTPATH}/save_zip.sh" > $ServicePath
+ExecStart=/bin/bash ${SCRIPTPATH}/save_zip.sh" > $ServicePath
 
 TimerPath=/etc/systemd/user/sched_backup.timer
 rm -f $TimerPath
