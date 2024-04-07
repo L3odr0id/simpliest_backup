@@ -7,4 +7,9 @@ These utilities will help you to zip some folder every night and keep a specifie
 3. Run `bash save_zip.sh` to chek if the paths exist (and run the backup once)
 4. Run `sudo bash start_systemd_timer.sh` to schedule the `systemd` timer to run the backup at 02:28 AM once a day
 
-P.S. Check if timer is actually running using `systemctl --user list-timers`
+P.S.
+Check if timer is actually running using `systemctl --user list-timers`
+Check service logs `systemctl --user status sched_backup.service`
+Start service one (to debug) `systemctl --user start sched_backup.service`
+To restart service `systemctl --user restart sched_backup.service` - **without** sudo
+To restart systemd daemon `systemctl --user daemon-reload`

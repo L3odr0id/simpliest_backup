@@ -12,7 +12,8 @@ echo "[Unit]
 Description=Scheduled Backup
 
 [Service]
-Type=simple
+Type=oneshot
+WorkingDirectory=${SCRIPTPATH}/
 ExecStart=/bin/bash ${SCRIPTPATH}/save_zip.sh" > $ServicePath
 
 TimerPath=/etc/systemd/user/sched_backup.timer

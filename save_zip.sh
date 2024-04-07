@@ -7,10 +7,10 @@ ZipName="${BackupsPath}$(date +%Y).$(date +%m).$(date +%d)-$EntityName-backup".z
 # Check if ${BackupsPath} exists
 cd $BackupsPath || { exit 1; }
 
-# Check if ${ServerPath} exists
-cd $ServerPath || { exit 1; }
+# Check if ${SourcePath} exists
+cd $SourcePath || { exit 1; }
 
-echo "[+] Zip folder ${ServerPath}"
+echo "[+] Zip folder ${SourcePath}"
 zip -9 -y -r -q $ZipName ./* -x "${Exclude[@]}"
 
 # Count backups
